@@ -80,7 +80,7 @@ defaults:
 # 7. Site settings
 encoding: utf-8 # Make sure the encoding is right
 title: "socialgorithm" # Site name or title, also used in jekyll-seo-tag
-logo: "/assets/placeholder-logo.svg" # Site logo, also used in jekyll-seo-tag
+logo: "/assets/logo.png" # Site logo, also used in jekyll-seo-tag
 description: "Social Algorithms - We organise hackathons, workshops, coding challenges... Get in touch if you want to host one!" # Site description and default description, also used in jekyll-seo-tag
 url: "https://socialgorithm.org" # Site url, also used in jekyll-seo-tag
 repo: "https://github.com/socialgorithm/socialgorithm.github.io"

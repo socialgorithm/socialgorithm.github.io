@@ -1,0 +1,21 @@
+
+<section id="contact" class="contact bg-primary">
+    <div class="container">
+        <h2>We <i class="fa fa-heart"></i> new friends!</h2>
+        <ul class="list-inline list-social">
+            {% for network in site.social %}
+            <li class="social-{{ network.title }}">
+                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
+            </li>
+            {% endfor %}
+            <li class="social-email">
+                <a href="mailto:hello@socialgorithm.org" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
+            </li>
+        </ul>
+    </div>
+</section>
+<footer>
+    <div class="container">
+        <p>&copy; 2017 <a href="https://socialgorithm.org">Socialgorithm</a>. All Rights Reserved.</p>
+    </div>
+</footer>

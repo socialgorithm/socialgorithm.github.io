@@ -2,20 +2,22 @@
 layout: default
 ---
 
-{% include site-header.html %}
+<div style="background: #333; height: 50px"></div>
 
-<main class="main  container">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <h1>{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <h2 class="subheading">{{ page.subtitle }}</h2>
+            {% endif %}
 
-	<article class="article  article--page  content  typeset">
+            <!-- Post Content -->
+            <article id="post" style="margin: 3em 0">
 
-    <h1>{{ page.title }}</h1>
+				{{ content }}
 
-    {{ content }}
-
-  </article>
-
-  {% include site-aside.html %}
-
-</main>
-
-{% include site-footer.html %}
+            </article>
+        </div>
+    </div>
+</div>

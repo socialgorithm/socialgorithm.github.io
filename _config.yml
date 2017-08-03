@@ -1,115 +1,30 @@
-# Site configuration
-# 1. Files excluded from Jekyll builds
-# 2. Installed Gems
-# 3. Gem settings
-# 4. Jekyll settings
-# 5. Collections
-# 6. Jekyll collections settings
-# 7. Site settings
-# 8. Site navigation
+# Site settings
+title: Socialgorithm
+email: hello@socialgorithm.org
+description: Social Stuff
 
-# 1. Files excluded from Jekyll builds
-exclude:
-- README.md
-- LICENSE
-- CNAME
-- Gemfile
-- Gemfile.lock
-- demo/*
+baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
+url: "https://socialgorithm.org" # the base hostname & protocol for your site
 
-# 2. Installed Gems
-gems:
-- jekyll-sitemap
-- jekyll-mentions
-- jekyll-paginate
-- jekyll-seo-tag
-- jekyll-redirect-from
-- jekyll-feed
-- jemoji
+#Google Ad Words Data from scripts code (using Google responsive options) and ad client
+data-ad-slot: 2973388149
+data-ad-client: ca-pub-9204963049240271
+google_ad_client: ca-pub-9204963049240271
 
-# 3. Gem settings
-paginate: 2 # jekyll-paginate > items per page
-paginate_path: blog/page:num # jekyll-paginate > blog page
-jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
-twitter:
-  username: chevi_ # jekyll-seo-tag > Owners twitter username
-author: socialgorithm # jekyll-seo-tag > default author
-social: # jekyll-seo-tag > social overrides
-  name: socialgorithm # jekyll-seo-tag > real name
-  links:  # jekyll-seo-tag > social aliases (sameAs)
-    #- https://twitter.com/socialgorithm
-    #- https://www.facebook.com/socialgorithm
-    #- https://www.linkedin.com/in/socialgorithm
-    #- https://plus.google.com/+socialgorithm
-    - https://github.com/socialgorithm
+google_analytics: "UA-86331249-1"
+#disqus_account: socialgorithm
 
-# 4. Jekyll settings
-sass:
-  style: compressed # Style compression
-permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
-excerpt_separator: <!-- more --> # Marks end of excerpt in posts
-timezone: Europe/London # Timezone for blog posts and alike
+# Social networks usernames (many more available: flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.) see all icon at fontawesome.io
+social:
+  - title: github
+    url: https://github.com/socialgorithm
 
-# 5. Collections
-collections:
-  posts:
-    title: Posts # Needed for Siteleaf
-    output: true
-    description: "Latest news" # The post list page content
-    feature_text: |
-      Welcome to socialgorithm
-    feature_image: "https://unsplash.it/1300/400?image=1067"
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-# 6. Jekyll collections settings
-defaults:
-  -
-    scope:
-      path: ""
-      type: pages
-    values:
-      layout: page # Default layout
-      image: "/assets/placeholder-social.png" # Default image for sharing
-  -
-    scope:
-      path: ""
-      type: posts
-    values:
-      layout: post # Default layout
-      image: "/assets/placeholder-social.png" # Default image for sharing
-
-# 7. Site settings
-encoding: utf-8 # Make sure the encoding is right
-title: "socialgorithm" # Site name or title, also used in jekyll-seo-tag
-logo: "/assets/logo.png" # Site logo, also used in jekyll-seo-tag
-description: "Social Algorithms - We organise hackathons, workshops, coding challenges... Get in touch if you want to host one!" # Site description and default description, also used in jekyll-seo-tag
-url: "https://socialgorithm.org" # Site url, also used in jekyll-seo-tag
-repo: "https://github.com/socialgorithm/socialgorithm.github.io"
-email: "aluralma@gmail.com"
-disqus: "socialgorithm"
-avatarurl: "https://www.gravatar.com/avatar/6c0377abcf4da91cdd35dea4554b2a4c" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub
-
-# 8. Site navigation
-navigation_header:
-  Home: /
-  Blog: /blog/
-  Categories: /categories/
-  Search: /search/
-
-navigation_footer:
-  socialgorithm: https://socialgorithm.org
-
-social_links:
-  GitHub: https://github.com/socialgorithm
-  link: https://socialgorithm.org
-
-sharing_links:
-  Twitter: "#1DA1F2"
-  facebook: "#3B5998"
-  Google+: "#DC4E41"
-  Pinterest: "#BD081C"
-  LinkedIn: "#0077B5"
-  tumblr: "#36465D"
-  Reddit: "#FF4500"
-  Hacker News: "#ff6600"
-  Designer News: "#2D72D9"
-  Email: ""
+gems: [jekyll-paginate, jekyll-feed]
+# Build settings

@@ -159,6 +159,13 @@ header {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: white;
 }
+header.intro-header {
+  background-size: cover;
+  margin-bottom: 3em;
+}
+header.intro-header .container {
+  margin-top: 25%;
+}
 header .header-content {
   text-align: center;
   padding: 150px 0 50px;

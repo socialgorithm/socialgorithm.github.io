@@ -4,6 +4,7 @@ _site/
 alembic-jekyll-theme-*.gem
 Gemfile.lock
 **/Gemfile.lock
+node_modules/
 
 *idea
 *.iml

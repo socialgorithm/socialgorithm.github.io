@@ -57,6 +57,7 @@ p {
     .navbar-header .navbar-brand {
         .heading-font;
         color: @theme-primary;
+        font-size: 1.7em;
         &:hover,
         &:focus {
             color: darken(@theme-primary, 10%);
@@ -96,7 +97,8 @@ p {
         background-color: transparent;
         border-color: transparent;
         .navbar-header .navbar-brand {
-            color: fade(white, 70%);
+            color: fade(white, 100%);
+            text-shadow: 0 1px 1px rgba(0,0,0,0.5);
             &:hover,
             &:focus {
                 color: white;
@@ -104,7 +106,8 @@ p {
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: fade(white, 70%);
+            color: fade(white, 100%);
+            text-shadow: 0 1px 1px rgba(0,0,0,0.5);
             &:hover {
                 color: white;
             }
@@ -122,6 +125,7 @@ p {
             .nav > li > a,
             .nav > li > a:focus {
                 color: @gray-darker;
+                text-shadow: none;
                 &:hover {
                     color: @theme-primary;
                 }
@@ -171,6 +175,10 @@ header {
                     margin-bottom: 25px;
                 }
             }
+        }
+        .btn-xl {
+            font-size: 0.7em;
+            margin-bottom: 2em;
         }
     }
     .device-container {
@@ -436,6 +444,9 @@ footer {
         color: white;
         background-color: @theme-primary;
         border-color: @theme-primary;
+    }
+    &.btn-default {
+        color: inherit;
     }
 }
 

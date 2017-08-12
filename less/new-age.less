@@ -50,8 +50,8 @@ p {
 // Navigation
 
 .navbar-default {
-    background-color: white;
-    border-color: fade(@gray-darker, 5%);
+    background-color: fade(black, 20%);
+    border-bottom: solid 1px fade(@gray-darker, 5%);
     .transition-all;
     .heading-font;
     .navbar-header .navbar-brand {
@@ -94,7 +94,6 @@ p {
         }
     }
     @media (min-width: 768px) {
-        background-color: transparent;
         border-color: transparent;
         .navbar-header .navbar-brand {
             color: fade(white, 100%);
@@ -387,6 +386,16 @@ section.contact {
             }
         }
     }
+}
+
+.text-3d {
+    text-shadow: #1abc9c 0 0 1px,
+                #19B394 0 4px 3px,
+                #1AAD90 0 9px 3px,
+                #16a085 0 12px 1px,
+                rgba(0,0,0,0.2) 0 14px 3px,
+                rgba(0,0,0,0.1) 0 20px 10px,
+                rgba(0,0,0,0.2) 0 15px 80px;;
 }
 
 footer {

@@ -11,7 +11,7 @@ event_location: The Shard, London
 ---
 
 We were invited to participate in [Tech Night London](https://www.facebook.com/media/set/?set=a.1170152843017561.1073741846.701527709880079&type=3),
-along with [WarwickTECH](https://medium.com/@WarwickTECH) at The Shard in London, in a fantastic event that we were really proud to be a part of.
+along with [WarwickTECH](https://medium.com/@WarwickTECH) at The Shard in London, in a fantastic event that we were really proud to be a part of!
 
 You can read more about the event itself in [this post by Diana Lee](https://medium.com/@dianaklee/a-new-approach-to-diversity-in-tech-5e5d978198f4) - organiser and She++ Ambassador in the UK.
 
@@ -36,6 +36,6 @@ The winner received a Raspberry PI with plenty of accessories to make anything w
 
 {% include image.html url="/img/events/shard_1/winner.jpg" description="The winner of the Ultimate TTT competition with his prize." %}
 
-Since it was our first event we completely forgot to right down anyone's name, including our winner... :sigh: Lessons for next time!
+Since it was our first event we completely forgot to write down anyone's name, including our winner... :sigh: Lessons for next time!
 
 Anyway, see you in [our next event](/events)!

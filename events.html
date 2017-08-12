@@ -3,4 +3,57 @@ title: "Events"
 layout: page
 ---
 
-<p>No upcoming events! (yet)</p>
+<a href="/host" class="pull-right btn">
+    <i class="fa fa-thumbs-up"></i>
+    Host an Event
+</a>
+
+<h2>Upcoming Events</h2>
+
+<ul>
+    {% assign postCount = 0 %}
+    {% for post in site.categories.events %}
+        {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+        {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
+        {% if posttime >= nowunix %}
+            {% if post.url %}
+                {% assign postCount = postCount | plus:1 %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% if postCount == 0 %}
+    <div class="alert alert-info">
+        <p>No upcoming events at the moment.</p>
+        <p>
+            <a href="https://twitter.com/Socialgorithm_">
+                <i class="fa fa-twitter"></i>
+                Follow us
+            </a> so you don't miss any!
+        </p>
+    </div>
+{% endif %}
+
+<h2>Past Events</h2>
+
+<ul>
+    {% assign postCount = 0 %}
+    {% for post in site.categories.events %}
+        {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+        {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
+        {% if posttime < nowunix %}
+            {% if post.url %}
+                {% assign postCount = postCount | plus:1 %}
+                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{% if postCount == 0 %}
+    <div class="alert alert-info">
+        No past events yet!
+    </div>
+{% endif %}

@@ -1,7 +1,7 @@
 # Site settings
 title: Socialgorithm
 email: hello@socialgorithm.org
-description: Social Stuff
+description: We organise hackathons, workshops and coding challenges. Get in touch if you want to host an event!
 
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
 url: "https://socialgorithm.org" # the base hostname & protocol for your site
@@ -18,6 +18,8 @@ google_analytics: "UA-86331249-1"
 social:
   - title: github
     url: https://github.com/socialgorithm
+  - title: twitter
+    url: https://twitter.com/Socialgorithm_
 
 # Build settings
 markdown: kramdown
@@ -26,5 +28,7 @@ permalink: pretty
 paginate: 5
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
-gems: [jekyll-paginate, jekyll-feed]
+plugins: [jekyll-paginate, jekyll-feed]
 # Build settings
+
+exclude: [ node_modules, .sass-cache, .git, less, _sass ]

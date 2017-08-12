@@ -1,0 +1,14 @@
+{% if include.post.url %}
+    <div class="media">
+        <div class="media-left">
+            <a href="{{ include.post.url | prepend: site.baseurl }}">
+                <img class="media-object img img-thumbnail" style="width: 200px; max-height: 200px;" src="/{{ include.post.header-img | prepend: site.baseurl }}" alt="{{ include.post.title }}">
+            </a>
+        </div>
+        <div class="media-body">
+            <small class="pul-right">{{ include.post.date | date: "%B %-d, %Y" }}</small>
+            <h3 class="media-heading"><a href="{{ include.post.url | prepend: site.baseurl }}">{{ include.post.title }}</a></h3>
+            <div style="font-size: 0.9em;">{{ include.post.excerpt }}</div>
+        </div>
+    </div>
+{% endif %}

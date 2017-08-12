@@ -19,7 +19,13 @@ layout: page
             {% if posttime >= nowunix %}
                 {% assign postCount = postCount | plus:1 %}
                 <li class="list-group-item">
-                    <a href="{{ post.url }}">{{ post.title }}</a>
+                    <a href="{{ post.url }}">
+                        <span class="badge badge-default pull-right">
+                            {{ post.event_date | date: "%B %-d, %Y" }}
+                        </span>
+                        <p>{{ post.title }}</p>
+                        <small>{{ post.event_location }}</small>
+                    </a>
                 </li>
             {% endif %}
         {% endif %}

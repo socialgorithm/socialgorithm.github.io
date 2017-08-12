@@ -414,6 +414,12 @@ footer ul li a:active,
 footer ul li a.active {
   text-decoration: none;
 }
+.post-heading {
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1em;
+  border-radius: 1em;
+}
 .bg-primary {
   background: #EF6C00;
   background: -webkit-linear-gradient(#EF6C00, #d66000);

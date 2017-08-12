@@ -10,15 +10,17 @@ layout: page
 
 <h2>Upcoming Events</h2>
 
-<ul>
+<ul class="list-group">
     {% assign postCount = 0 %}
     {% for post in site.categories.events %}
-        {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
-        {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
-        {% if posttime >= nowunix %}
-            {% if post.url %}
+        {% if post.url and post.event_date %}
+            {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+            {% capture posttime %}{{post.event_date | date: '%s'}}{% endcapture %}
+            {% if posttime >= nowunix %}
                 {% assign postCount = postCount | plus:1 %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                <li class="list-group-item">
+                    <a href="{{ post.url }}">{{ post.title }}</a>
+                </li>
             {% endif %}
         {% endif %}
     {% endfor %}
@@ -36,17 +38,27 @@ layout: page
     </div>
 {% endif %}
 
+<hr>
+
 <h2>Past Events</h2>
 
-<ul>
+<ul class="list-group">
     {% assign postCount = 0 %}
     {% for post in site.categories.events %}
-        {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
-        {% capture posttime %}{{post.date | date: '%s'}}{% endcapture %}
-        {% if posttime < nowunix %}
-            {% if post.url %}
+        {% if post.url and post.event_date %}
+            {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+            {% capture posttime %}{{post.event_date | date: '%s'}}{% endcapture %}
+            {% if posttime < nowunix %}
                 {% assign postCount = postCount | plus:1 %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                <li class="list-group-item">
+                    <a href="{{ post.url }}">
+                        <span class="badge badge-default pull-right">
+                            {{ post.event_date | date: "%B %-d, %Y" }}
+                        </span>
+                        <p>{{ post.title }}</p>
+                        <small>{{ post.event_location }}</small>
+                    </a>
+                </li>
             {% endif %}
         {% endif %}
     {% endfor %}

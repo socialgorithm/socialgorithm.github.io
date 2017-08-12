@@ -50,13 +50,14 @@ p {
 // Navigation
 
 .navbar-default {
-    background-color: fade(black, 20%);
+    background-color: white;
     border-bottom: solid 1px fade(@gray-darker, 5%);
+
     .transition-all;
     .heading-font;
     .navbar-header .navbar-brand {
         .heading-font;
-        color: @theme-primary;
+        color: black;
         font-size: 1.7em;
         &:hover,
         &:focus {
@@ -94,6 +95,7 @@ p {
         }
     }
     @media (min-width: 768px) {
+        background-color: fade(black, 20%);
         border-color: transparent;
         .navbar-header .navbar-brand {
             color: fade(white, 100%);
@@ -114,6 +116,7 @@ p {
         &.affix {
             background-color: white;
             border-color: fade(@gray-darker, 10%);
+            box-shadow: 0 1px 10px rgba(0,0,0,0.1);
             .navbar-header .navbar-brand {
                 color: @gray-darker;
                 &:hover,

@@ -2,7 +2,7 @@
 layout:     post
 title:      "Coding Workshop - AI & Game Theory @Tech Night London"
 subtitle:   "Our first event"
-date:       2017-08-03
+date:       2017-08-12
 author:     "Socialgorithm"
 header-img: "img/2017_03_06_room.jpg"
 categories: events

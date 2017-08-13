@@ -4,7 +4,7 @@ title:      "Coding Workshop - AI & Game Theory @Tech Night London"
 subtitle:   "Our first event"
 date:       2017-08-12
 author:     "Socialgorithm"
-header-img: "img/2017_03_06_room.jpg"
+header-img: "img/events/shard_1/room.jpg"
 categories: events
 event_date: 2017-03-06
 event_location: The Shard, London

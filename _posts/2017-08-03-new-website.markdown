@@ -4,7 +4,7 @@ title:      "Socialgorithm is live!"
 subtitle:   "Finally :)"
 date:       2017-08-03
 author:     "Socialgorithm"
-header-img: "img/post-bg-01.jpg"
+header-img: "img/launch.jpg"
 categories: announcements
 ---
 

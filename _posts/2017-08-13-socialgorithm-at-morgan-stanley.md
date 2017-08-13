@@ -6,7 +6,7 @@ date:       2017-08-13
 author:     "Socialgorithm"
 header-img: "img/events/ms_1/group1.jpg"
 categories: events
-event_date: 2017-05-01
+event_date: 2017-05-31
 event_location: Morgan Stanley HQ, Canary Wharf, London
 ---
 

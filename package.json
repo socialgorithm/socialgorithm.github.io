@@ -6,8 +6,7 @@
   "author": "Socialgorithm",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "jekyll build",
-    "build:watch": "jekyll serve --watch"
+    "build": "gulp dev"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",

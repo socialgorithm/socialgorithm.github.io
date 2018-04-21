@@ -25,6 +25,7 @@
     "url": "https://github.com/socialgorithm/socialgorithm.github.io.git"
   },
   "dependencies": {
+    "npm": "^5.8.0",
     "simple-line-icons": "^2.3.2"
   }
 }

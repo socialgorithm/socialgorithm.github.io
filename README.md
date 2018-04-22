@@ -1,5 +1,7 @@
 # Socialgorithm Website
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a5d4d744738b42fc841770d9f936fcb0)](https://www.codacy.com/app/socialgorithm/socialgorithm.github.io?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=socialgorithm/socialgorithm.github.io&amp;utm_campaign=Badge_Grade)
+
 Welcome humans, or robots.
 
 This is the source repository for the Socialgorithm website, built and served using Jekyll.

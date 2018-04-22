@@ -24,6 +24,6 @@ Run the following to install dependencies:
 
 To view the local website:
  
-`gulp dev`
+`gulp serve`
 
-You can now make changes and they should automatically display on the running website (http://localhost:3000), if not, Ctrl/Cmd+C and re-run `gulp dev`
+You can now make changes and they should automatically display on the running website (http://localhost:3000), if not, Ctrl/Cmd+C and re-run `gulp serve`

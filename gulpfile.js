@@ -1,6 +1,5 @@
 var childProc = require('child_process');
 var gulp = require('gulp');
-var gutil = require('gulp-util');
 var less = require('gulp-less');
 var browserSync = require('browser-sync').create();
 var header = require('gulp-header');

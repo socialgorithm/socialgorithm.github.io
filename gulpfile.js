@@ -10,12 +10,21 @@ var pkg = require("./package.json");
 
 // Set the banner content
 var banner = ["/*!\n",
-    " * Start Bootstrap - <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n",
-    " * Copyright 2013-" + (new Date()).getFullYear(), " <%= pkg.author %>\n",
+    " * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n",
+    " * Copyright 2017-" + (new Date()).getFullYear(), " <%= pkg.author %>\n",
     " * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n",
+    " * \n",
+    " * \n",
+    " * In the words of The Beatles, \"We hope you will enjoy the show\"",
     " */\n",
     ""
 ].join("");
+
+gulp.task("build", ["less", "minify-css", "minify-js", "copy-vendor", "jekyll-build"]);
+
+gulp.task("serve", ["build", "browser-sync", "watch"]);
+
+gulp.task("default", ["build"]);
 
 // Compile LESS files from /less into /css
 gulp.task("less", function() {
@@ -96,9 +105,3 @@ gulp.task("watch", function() {
   gulp.watch("js/**/*.js", browserSync.reload);
   gulp.watch(["*.html", "_includes/*.html", "_layouts/*.html", "_posts/*"], ["jekyll-rebuild"]);
 });
-
-gulp.task("build", ["less", "minify-css", "minify-js", "copy-vendor", "jekyll-build"]);
-
-gulp.task("serve", ["build", "browser-sync", "watch"]);
-
-gulp.task("default", ["build"]);

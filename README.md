@@ -29,3 +29,11 @@ To view the local website:
 `gulp serve`
 
 You can now make changes and they should automatically display on the running website (http://localhost:3000), if not, Ctrl/Cmd+C and re-run `gulp serve`
+
+### Developer FAQ
+
+###### Vulnerability Patching / Updating Packages
+
+`npm update --save` will update node packages and save to package.json
+
+`gem update --save` will update ruby gems

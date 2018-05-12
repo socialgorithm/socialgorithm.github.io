@@ -6,7 +6,8 @@
   "author": "Socialgorithm",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "gulp dev"
+    "build": "gulp build",
+    "serve": "gulp serve"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",
@@ -25,7 +26,6 @@
     "url": "https://github.com/socialgorithm/socialgorithm.github.io.git"
   },
   "dependencies": {
-    "npm": "^5.8.0",
     "simple-line-icons": "^2.3.2"
   }
 }

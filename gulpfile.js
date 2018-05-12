@@ -9,16 +9,13 @@ var uglify = require("gulp-uglify");
 var pkg = require("./package.json");
 
 // Set the banner content
-var banner = ["/*!\n",
-    " * <%= pkg.title %> v<%= pkg.version %> (<%= pkg.homepage %>)\n",
-    " * Copyright 2017-" + (new Date()).getFullYear(), " <%= pkg.author %>\n",
-    " * Licensed under <%= pkg.license.type %> (<%= pkg.license.url %>)\n",
-    " * \n",
-    " * \n",
-    " * In the words of The Beatles, \"We hope you will enjoy the show\"",
-    " */\n",
-    ""
-].join("");
+var themeCopyright = ['/*!\n',
+  ' * Start Bootstrap - New Age Theme\n',
+  ' * Copyright 2013-' + (new Date()).getFullYear(), ' Blackrock Digital\n',
+  ' * Licensed under MIT License (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)\n',
+  ' */\n',
+  ''
+].join('');
 
 gulp.task("build", ["less", "minify-css", "minify-js", "copy-vendor", "jekyll-build"]);
 
@@ -30,7 +27,7 @@ gulp.task("default", ["build"]);
 gulp.task("less", function() {
   return gulp.src("less/new-age.less")
     .pipe(less())
-    .pipe(header(banner, { pkg: pkg }))
+    .pipe(header(themeCopyright, { pkg: pkg }))
     .pipe(gulp.dest("css"))
     .pipe(browserSync.reload({
       stream: true
@@ -40,6 +37,7 @@ gulp.task("less", function() {
 gulp.task("minify-css", ["less"], function() {
   return gulp.src("css/new-age.css")
     .pipe(cleanCSS({ compatibility: "ie8" }))
+    .pipe(header(themeCopyright, { pkg: pkg }))
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("css"))
     .pipe(browserSync.reload({
@@ -50,7 +48,7 @@ gulp.task("minify-css", ["less"], function() {
 gulp.task("minify-js", function() {
   return gulp.src("js/new-age.js")
     .pipe(uglify())
-    .pipe(header(banner, { pkg: pkg }))
+    .pipe(header(themeCopyright, { pkg: pkg }))
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("js"))
     .pipe(browserSync.reload({

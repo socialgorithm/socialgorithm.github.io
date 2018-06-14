@@ -4,11 +4,11 @@
         <h2>Contact us</h2>
         <ul class="list-inline list-contact">
             {% for network in site.social %}
-            <li class="contact-box-{{ network.title }}">
+            <li class="contact-box">
                 <a href="{{ network.url }}" class="btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
             </li>
             {% endfor %}
-            <li class="contact-box-email">
+            <li class="contact-box">
                 <a href="mailto:hello@socialgorithm.org" class="btn-outline"><i class="fa fa-fw fa-envelope-o"></i></a>
             </li>
         </ul>

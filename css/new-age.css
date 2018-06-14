@@ -376,23 +376,11 @@ section.contact .list-contact li a {
   border-radius: 100%;
   color: white;
 }
-section.contact .list-contact li.contact-box-twitter a {
-  background-color: #1da1f2;
+section.contact .list-contact li.contact-box a {
+  background-color: #333;
 }
-section.contact .list-contact li.contact-box-twitter a:hover {
-  background-color: #0d95e8;
-}
-section.contact .list-contact li.contact-box-facebook a {
-  background-color: #3b5998;
-}
-section.contact .list-contact li.contact-box-facebook a:hover {
-  background-color: #344e86;
-}
-section.contact .list-contact li.contact-box-google-plus a {
-  background-color: #dd4b39;
-}
-section.contact .list-contact li.contact-box-google-plus a:hover {
-  background-color: #d73925;
+section.contact .list-contact li.contact-box a:hover {
+  background-color: #262626;
 }
 .text-3d {
   text-shadow: #1abc9c 0 0 1px, #19B394 0 4px 3px, #1AAD90 0 9px 3px, #16a085 0 12px 1px, rgba(0, 0, 0, 0.2) 0 14px 3px, rgba(0, 0, 0, 0.1) 0 20px 10px, rgba(0, 0, 0, 0.2) 0 15px 80px;

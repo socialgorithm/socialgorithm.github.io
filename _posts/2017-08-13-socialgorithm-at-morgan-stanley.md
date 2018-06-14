@@ -8,6 +8,7 @@ header-img: "img/events/ms_1/group1.jpg"
 categories: events
 event_date: 2017-05-31
 event_location: Morgan Stanley HQ, Canary Wharf, London
+event_abstract: Our friends from She++ and UCL TechSoc reached out to organise a coding workshop for first and second year students.
 ---
 
 Almost immediately after finishing our [coding workshop at The Shard](/events/2017/08/12/socialgorithm-at-shard/), we were invited by [University College London's Tech Society (UCL TechSoc)](https://techsoc.io/) and [ShePlusPlus](https://sheplusplus.org/) to host an algorithmic battle at the [Morgan Stanley HQ](https://www.facebook.com/events/1874748126125491) in Canary Wharf. We must be doing something right!

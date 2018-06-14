@@ -1,0 +1,158 @@
+---
+title: "Workshops"
+layout: page-wide
+---
+
+{% assign upcomingEvents = 0 %}
+{% for post in site.posts %}
+    {% if post.url and post.event_date %}
+        {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+        {% capture posttime %}{{post.event_date | date: '%s'}}{% endcapture %}
+        {% if posttime >= nowunix %}
+            {% assign upcomingEvents=upcomingEvents | plus:1 %}
+        {% endif %}
+    {% endif %}
+{% endfor %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <h1>Workshops</h1>
+        </div>
+    </div>
+</div>
+
+<div style="background: #efefef; margin-top: 1em">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="media" style="margin-top: 2em">
+                    <div class="media-left">
+                        <div class="media-object">
+                            <img class="img img-thumbnail" style="max-width: initial; width: 160px" src="https://socialgorithm.org/ultimate-ttt-docs/assets/uttt.gif" alt="Ultimate TTT">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <a href="https://uttt.socialgorithm.org">
+                            <h2 style="margin-top: 0">Ultimate TicTacToe</h2>
+                        </a>
+                        <p>Ultimate TicTacToe is a game of tic tac toe on steroids. Originally popular in Mathematics circles, it involves playing nine games of
+                            tic-tac-toe on a single board, simultaneously!
+                        </p>
+                        <p>
+                            Students write AI algorithms to compete against the algorithms of other students,
+                            in any programming language, following our guided workshop about Monte Carlo tree search and other goodies.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="media" style="margin-top: 2em">
+                    <div class="media-left">
+                        <div class="media-object">
+                            <img class="img img-thumbnail" style="max-width: initial; width: 160px" src="{{ site.baseurl }}/img/tech/elon.jpg" alt="Elon">
+                        </div>
+                    </div>
+                    <div class="media-body">
+                        <a href="https://github.com/socialgorithm/elon-server">
+                            <h2 style="margin-top: 0">
+                                Elon Self-Driving Simulator
+                                <span class="badge badge-info">Coming soon</span>
+                            </h2>
+                        </a>
+                        <p>Students will develop their own self driving algorithms to drive a simulated car, avoid pedestrians and
+                            obstacles in the road and ultimately be the first to get their passengers safely to their destination.</p>
+                        <p>We're still working on this one! :)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            {% if upcomingEvents > 0 %}
+            
+                <h2>Upcoming Events</h2>
+            
+                <ul class="list-group">
+                    {% assign postCount = 0 %}
+                    {% for post in site.categories.events %}
+                        {% if post.url and post.event_date %}
+                            {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+                            {% capture posttime %}{{post.event_date | date: '%s'}}{% endcapture %}
+                            {% if posttime >= nowunix %}
+                                {% assign postCount = postCount | plus:1 %}
+                                <li class="list-group-item">
+                                    <a href="{{ post.url }}">
+                                        <span class="badge badge-default pull-right">
+                                            {{ post.event_date | date: "%B %-d, %Y" }}
+                                        </span>
+                                        <h4 style="margin: 0">{{ post.title }}</h4>
+                                        <small>{{ post.event_location }}</small>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            
+            <hr>
+            
+            <h2>Past Events</h2>
+            
+            <ul class="list-group">
+                {% assign postCount = 0 %}
+                {% for post in site.categories.events %}
+                    {% if post.url and post.event_date %}
+                        {% capture nowunix %}{{'now' | date: '%s'}}{% endcapture %}
+                        {% capture posttime %}{{post.event_date | date: '%s'}}{% endcapture %}
+                        {% if posttime < nowunix %}
+                            {% assign postCount = postCount | plus:1 %}
+                            <li class="list-group-item">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <div class="media-object">
+                                            <img class="img img-thumbnail" style="max-width: initial; width: 160px" src="{{ site.baseurl }}/{{ post.header-img }}" alt="{{ post.title }}">
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        <a href="{{ post.url }}">
+                                            <h3 style="margin-top: 0">
+                                                {{ post.title }}
+                                            </h3>
+                                        </a>
+                                        <p style="font-size: 0.9em">
+                                            {{ post.event_abstract }}
+                                        </p>
+                                        <div style="text-align: right">
+                                            <small class="text-muted">
+                                                <span style="margin-right: 1em">
+                                                    <i class="fa fa-map-marker"></i>
+                                                    {{ post.event_location }}
+                                                </span>
+                                                <i class="fa fa-calendar" style="margin-right: 0.1em;"></i>
+                                                {{ post.event_date | date: "%B %-d, %Y" }}
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            
+            {% if postCount == 0 %}
+                <div class="alert alert-info">
+                    No past events yet!
+                </div>
+            {% endif %}            
+        </div>
+    </div>
+</div>

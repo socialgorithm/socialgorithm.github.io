@@ -8,6 +8,7 @@ header-img: "img/events/shard_1/room.jpg"
 categories: events
 event_date: 2017-03-06
 event_location: The Shard, London
+event_abstract: We partnered with the University of Warwick to host a game theory and AI workshop.
 ---
 
 We were invited to participate in [Tech Night London](https://www.facebook.com/media/set/?set=a.1170152843017561.1073741846.701527709880079&type=3),

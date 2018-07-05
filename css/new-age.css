@@ -482,13 +482,6 @@ footer ul li a.active {
   margin: 0 auto;
   width: 150px;
   height: 150px;
-  -webkit-filter: grayscale(80%);
-  filter: grayscale(80%);
-  transition: filter ease-in-out 100ms;
-}
-.avatar:hover .img {
-  -webkit-filter: grayscale(0%);
-  filter: grayscale(0%);
 }
 .avatar .text h1,
 .avatar .text h2,

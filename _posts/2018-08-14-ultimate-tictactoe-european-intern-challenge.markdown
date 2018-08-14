@@ -60,10 +60,14 @@ An article like this isn't complete without some screenshots, so here is what a 
 
 And here is the tournament bracket and ranking from the intern challenge:
 
-{% include image.html url="/img/blog/2018-08-14-intern-challenge/bracket.png" description="Intern Challenge Tournament" %}
+{% include image.html url="/img/blog/2018-08-14-intern-challenge/bracket.jpg" description="Intern Challenge Tournament" %}
 
 ## Future Directions
 
 We feel we've reached a good state in the structure of the code, but we need a major overhaul of our data flow paradigm. A telling code smell is the passing of a `TournamentEvents` interface from `Tournament` to `Match` and to `Game`, in order to pass events back concerning the start, end and moves within a game (to display all that visual goodness you can see in the previous images).
 
-Rather than pass an event callback interface all the way down and break abstraction, or to work extremely hard to abstract and end up with a lot of boilerplate conversion code, we are now looking at other options, such as PubSub or Reactive Streams. We will probably give these both a fair go, if you would like to help us out, get in touch!
+Rather than pass an event callback interface all the way down and break abstraction, or to work extremely hard to abstract and end up with a lot of boilerplate conversion code, we are now looking at other options, such as `PubSub` or `Reactive Streams`.
+
+We'll bring you another blog post once we've figured out what the best architecture is, but until then, if you'd like to help us, please get in touch!
+
+If you'd like us to organise an event similar to this one, also get in touch!

@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "Ultimate TicTacToe supports Morgan Stanley's European Intern Challenge"
+subtitle:   "
 date:       2018-08-14
 author:     "Socialgorithm"
 header-img: "img/blog/2018-08-14-intern-challenge/bracket.jpg"
@@ -18,7 +19,7 @@ At Socialgorithm, we love to complicate our lives by making huge changes to the 
 
 If you ask me to describe the development of our Ultimate TicTacToe platform so far, fire drill and spaghetti would be the words that come to mind. To be fair though, it has worked well so far, and things that have the quality of working are to be prized over architectures that never made it to production.
 
-Still, There is wisdom in Bob Martin's idea of leaving campgrounds cleaner than you find them, and for a competition we provided our platform for a couple fo weeks ago, our architecture needed a major overhaul.
+Still, There is wisdom in Bob Martin's idea of leaving campgrounds cleaner than you find them, and for a competition we provided our platform for a couple of weeks ago, our architecture needed a major overhaul.
 
 ## The Intern Challenge
 

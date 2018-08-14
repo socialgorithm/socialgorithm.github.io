@@ -19,7 +19,7 @@ Still, There is wisdom in Bob Martin's idea of leaving campgrounds cleaner than 
 
 ## The Intern Challenge
 
-A couple of months ago, we were approached to organise an AI challenge for an internship program. 80 bright interns, in teams of 4, across 3 geographic locations would develop algorithms over 1 month, in order to compete against each other in a final Ultimate TicTacToe battle. The asks:
+A couple of months ago, we were approached to organise an AI challenge for Morgan Stanley's internship program. 80 bright interns, in teams of 4, across 3 geographic locations would develop algorithms over 1 month, in order to compete against each other in a final Ultimate TicTacToe battle. The asks:
 
 1. Multiple Lobbies/Tournaments
   - This allows players to practice against their own and each other's algorithms in the weeks leading up to the competition

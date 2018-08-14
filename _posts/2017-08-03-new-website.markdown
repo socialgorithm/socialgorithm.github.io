@@ -14,5 +14,5 @@ We've just finished a Hackathon with SheCodes, UCL and Morgan Stanley, at Morgan
 but if you'd like us to organise something, get in touch with us at [hello@socialgorithm.org](mailto:hello@socialgorithm.org)!
 
 <div class="text-center">
-    <img src="/img/events/ms_1/group1.jpg" alt="Group picture at our MS event" class="img img-responsive img-thumbnail">
+    <img src="/img/blog/2017-08-13-socialgorithm-at-morgan-stanley/group1.jpg" alt="Group picture at our MS event" class="img img-responsive img-thumbnail">
 </div>

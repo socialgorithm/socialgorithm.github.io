@@ -15,17 +15,19 @@ To make updates to the website, clone this repository and do the following:
 You will need to have the following build tooling installed:
 
 - Node
+- Ruby
 
 ### Install Dependencies
 
 Run the following to install dependencies:
 
 `npm install`
+`bundle install`
 
 ### Serve the local website
 
 To view the local website:
- 
-`npm run serve`
+
+`npm run start`
 
 You can now make changes and they should automatically display on the running website (http://localhost:3000), if not, Ctrl/Cmd+C and re-run `npm run serve`

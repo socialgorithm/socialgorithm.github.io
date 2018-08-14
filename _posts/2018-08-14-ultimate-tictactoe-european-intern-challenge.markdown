@@ -9,13 +9,15 @@ event_location: Morgan Stanley HQ, Canary Wharf, London
 event_abstract: Morgan Stanley used our Ultimate TicTacToe platform to run an internship challenge for 80 interns across London, Budapest and Glasgow.
 ---
 
+Morgan Stanley used our Ultimate TicTacToe platform to run an internship challenge for 80 interns across London, Budapest and Glasgow.
+
+--------------
+
 At Socialgorithm, we love to complicate our lives by making huge changes to the architectures of applications that work just fine.
 
 If you ask me to describe the development of our Ultimate TicTacToe platform so far, fire drill and spaghetti would be the words that come to mind. To be fair though, it has worked well so far, and things that have the quality of working are to be prized over architectures that never made it to production.
 
 Still, There is wisdom in Bob Martin's idea of leaving campgrounds cleaner than you find them, and for a competition we provided our platform for a couple fo weeks ago, our architecture needed a major overhaul.
-
---------------
 
 ## The Intern Challenge
 

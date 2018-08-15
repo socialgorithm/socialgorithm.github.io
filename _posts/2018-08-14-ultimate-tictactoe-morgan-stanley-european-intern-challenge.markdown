@@ -4,7 +4,7 @@ title:      "Ultimate TicTacToe supports Morgan Stanley's European Intern Challe
 subtitle:   "
 date:       2018-08-14
 author:     "Socialgorithm"
-header-img: "img/blog/2018-08-14-intern-challenge/bracket.jpg"
+header-img: "/img/blog/2018-08-14-intern-challenge/bracket.jpg"
 categories: tech
 event_date: 2018-08-03
 event_location: Morgan Stanley HQ, Canary Wharf, London

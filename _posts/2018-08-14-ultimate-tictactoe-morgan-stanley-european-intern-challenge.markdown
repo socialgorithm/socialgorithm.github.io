@@ -1,6 +1,7 @@
 ---
 layout:     post
 title:      "Ultimate TicTacToe supports Morgan Stanley's European Intern Challenge"
+subtitle:   "Supporting 80 interns in fierce competition!"
 date:       2018-08-14
 author:     "Socialgorithm"
 header-img: "/img/blog/2018-08-14-intern-challenge/bracket.jpg"
@@ -47,9 +48,7 @@ Lobbies can be then be configured for different game types, one of which is 1vs1
 
 The idea of using a matchmaker interface helped us to separate concerns all over the code, to the point where we ended up with a much cleaner structure (as you can see above). In summary, our code now flows as follows:
 
-[Server] -> [Lobby] -> [Tournament] -> [Match] -> [Game]
-                             |
-                       [Matchmaker]
+[Server] -> [Lobby] -> [Tournament / Matchmaker] -> [Match] -> [Game]
 
 Hopefully you'll agree that this is a much cleaner implementation.
 

@@ -1,7 +1,6 @@
 ---
 layout:     post
 title:      "Ultimate TicTacToe supports Morgan Stanley's European Intern Challenge"
-subtitle:   "
 date:       2018-08-14
 author:     "Socialgorithm"
 header-img: "/img/blog/2018-08-14-intern-challenge/bracket.jpg"

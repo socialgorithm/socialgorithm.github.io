@@ -17,24 +17,18 @@ var themeCopyright = ['/*!\n',
   ''
 ].join('');
 
-gulp.task("build", ["less", "minify-css", "minify-js", "copy-vendor", "jekyll-build"]);
-
-gulp.task("serve", ["build", "browser-sync", "watch"]);
-
-gulp.task("default", ["build"]);
-
 // Compile LESS files from /less into /css
-gulp.task("less", function() {
-  return gulp.src("less/new-age.less")
+function lessCSS() {
+  return gulp.src(["less/new-age.less"])
     .pipe(less())
     .pipe(header(themeCopyright, { pkg: pkg }))
     .pipe(gulp.dest("css"))
     .pipe(browserSync.reload({
       stream: true
-    }))
-});
+    })) 
+};
 
-gulp.task("minify-css", ["less"], function() {
+function minifyCSS() {
   return gulp.src("css/new-age.css")
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(header(themeCopyright, { pkg: pkg }))
@@ -43,9 +37,9 @@ gulp.task("minify-css", ["less"], function() {
     .pipe(browserSync.reload({
       stream: true
     }))
-});
+};
 
-gulp.task("minify-js", function() {
+function minifyJS() {
   return gulp.src("js/new-age.js")
     .pipe(uglify())
     .pipe(header(themeCopyright, { pkg: pkg }))
@@ -54,10 +48,10 @@ gulp.task("minify-js", function() {
     .pipe(browserSync.reload({
       stream: true
     }))
-});
+};
 
 // Copy vendor libraries from /node_modules into /vendor
-gulp.task("copy-vendor", function() {
+function copyVendor(done) {
   gulp.src(["node_modules/bootstrap/dist/**/*", "!**/npm.js", "!**/bootstrap-theme.*", "!**/*.map"])
     .pipe(gulp.dest("vendor/bootstrap"));
 
@@ -76,30 +70,30 @@ gulp.task("copy-vendor", function() {
     "!node_modules/font-awesome/*.json"
   ])
     .pipe(gulp.dest("vendor/font-awesome"))
-});
+  done()
+};
 
-gulp.task("jekyll-build", function (done) {
+function jekyllBuild(done) {
   browserSync.notify("Building Jekyll");
   return childProc.spawn("jekyll", ["build"], {stdio: "inherit"})
     .on("close", done);
-});
+};
 
-gulp.task("jekyll-rebuild", ["jekyll-build"], function () {
-  browserSync.reload();
-});
-
-gulp.task("browser-sync", ["jekyll-build"], function() {
+function browserSync() {
   browserSync.init({
     server: {
       baseDir: "_site"
     }
   })
-});
+};
 
-gulp.task("watch", function() {
-  gulp.watch("less/*.less", ["less"]);
-  gulp.watch("css/*.css", ["minify-css"]);
-  gulp.watch("js/*.js", ["minify-js"]);
+function watch() {
+  gulp.watch("less/*.less", lessCSS);
+  gulp.watch("css/*.css", minifyCSS);
+  gulp.watch("js/*.js", minifyJS);
   gulp.watch("js/**/*.js", browserSync.reload);
-  gulp.watch(["*.html", "_includes/*.html", "_layouts/*.html", "_posts/*"], ["jekyll-rebuild"]);
-});
+  gulp.watch(["*.html", "_includes/*.html", "_layouts/*.html", "_posts/*"], browserSync.reload);
+};
+
+exports.build = gulp.series(lessCSS, minifyCSS, minifyJS, copyVendor, jekyllBuild);
+exports.serve = gulp.series(lessCSS, minifyCSS, minifyJS, copyVendor, jekyllBuild, browserSync.reload, watch);

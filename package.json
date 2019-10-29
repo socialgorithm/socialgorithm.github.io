@@ -6,8 +6,8 @@
   "author": "Socialgorithm",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "gulp build",
-    "start": "gulp serve"
+    "build": "bundle exec gulp build",
+    "start": "bundle exec gulp serve"
   },
   "devDependencies": {
     "bootstrap": "^3.3.7",

@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div style="background: #333; height: 50px"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <h1>{{ page.title }}</h1>
+            {% if page.subtitle %}
+            <h2 class="subheading">{{ page.subtitle }}</h2>
+            {% endif %}
+
+            <!-- Post Content -->
+            <article id="post" style="margin: 3em 0">
+
+				{{ content }}
+
+            </article>
+        </div>
+    </div>
+</div>

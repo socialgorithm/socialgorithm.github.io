@@ -21,8 +21,10 @@ You will need to have the following build tooling installed:
 
 Run the following to install dependencies:
 
-`npm install`
-`bundle install`
+```sh
+npm install
+bundle install
+```
 
 ### Serve the local website
 
@@ -30,4 +32,4 @@ To view the local website:
 
 `npm run start`
 
-You can now make changes and they should automatically display on the running website (http://localhost:3000), if not, Ctrl/Cmd+C and re-run `npm run serve`
+You can now make changes and they should automatically display on the running website (http://localhost:3000), if not, Ctrl/Cmd+C and re-run `npm run start`

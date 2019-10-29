@@ -24,7 +24,6 @@ social:
     url: https://socialgorithm-slack.herokuapp.com
 
 # Build settings
-source: src
 markdown: kramdown
 highlighter: rouge
 permalink: pretty

@@ -35,34 +35,34 @@ function browserSyncReload(done) {
 }
 
 function lessCSS() {
-  return gulp.src("src/less/new-age.less")
+  return gulp.src("less/new-age.less")
     .pipe(less())
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(header(themeCopyright, { pkg: pkg }))
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("src/css"))
+    .pipe(gulp.dest("css"))
     .pipe(_browserSync.stream());
 }
 
 function minifyJS() {
-  return gulp.src("src/js/new-age.js")
+  return gulp.src("js/new-age.js")
     .pipe(uglify())
     .pipe(header(themeCopyright, { pkg: pkg }))
     .pipe(rename({ suffix: ".min" }))
-    .pipe(gulp.dest("src/js"))
+    .pipe(gulp.dest("js"))
     .pipe(_browserSync.stream());
 };
 
 // Copy vendor libraries from /node_modules into /vendor
 function copyVendor(done) {
   gulp.src(["node_modules/bootstrap/dist/**/*", "!**/npm.js", "!**/bootstrap-theme.*", "!**/*.map"])
-    .pipe(gulp.dest("src/vendor/bootstrap"));
+    .pipe(gulp.dest("vendor/bootstrap"));
 
   gulp.src(["node_modules/jquery/dist/jquery.js", "node_modules/jquery/dist/jquery.min.js"])
-    .pipe(gulp.dest("src/vendor/jquery"));
+    .pipe(gulp.dest("vendor/jquery"));
 
   gulp.src(["node_modules/simple-line-icons/*/*"])
-    .pipe(gulp.dest("src/vendor/simple-line-icons"));
+    .pipe(gulp.dest("vendor/simple-line-icons"));
 
   gulp.src([
     "node_modules/font-awesome/**",
@@ -72,7 +72,7 @@ function copyVendor(done) {
     "!node_modules/font-awesome/*.md",
     "!node_modules/font-awesome/*.json"
   ])
-    .pipe(gulp.dest("src/vendor/font-awesome"))
+    .pipe(gulp.dest("vendor/font-awesome"))
   done()
 };
 
@@ -81,9 +81,9 @@ function jekyllBuild() {
 };
 
 function watch(done) {
-  gulp.watch("src/less/*.less", lessCSS);
-  gulp.watch("src/js/*.js", minifyJS);
-  gulp.watch(["src/*.html", "src/_includes/*.html", "src/_layouts/*.html", "src/_posts/*"], gulp.series(jekyllBuild, browserSyncReload));
+  gulp.watch("less/*.less", lessCSS);
+  gulp.watch("js/*.js", minifyJS);
+  gulp.watch(["*.html", "_includes/*.html", "_layouts/*.html", "_posts/*"], gulp.series(jekyllBuild, browserSyncReload));
   done();
 };
 

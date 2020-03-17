@@ -20,8 +20,6 @@ social:
     url: https://github.com/socialgorithm
   - title: twitter
     url: https://twitter.com/Socialgorithm_
-  - title: slack
-    url: https://socialgorithm-slack.herokuapp.com
 
 # Build settings
 markdown: kramdown

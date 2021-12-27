@@ -16,10 +16,10 @@ google_analytics: "UA-119875762-1"
 
 # Social networks usernames (many more available: flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.) see all icon at fontawesome.io
 social:
-  - title: github
-    url: https://github.com/socialgorithm
   - title: slack
     url: https://socialgorithm-slack.herokuapp.com
+  - title: github
+    url: https://github.com/socialgorithm
 
 # Build settings
 markdown: kramdown
